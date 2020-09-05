@@ -1,0 +1,12 @@
+.bordeAzul {
+    border: 5px solid lightblue;
+}
+
+.bordeVerde {
+    border: 5px solid lightgreen;
+}
+
+.activado {
+    font-weight: bold;
+    background: yellow;
+}

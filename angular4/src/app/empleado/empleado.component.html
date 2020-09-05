@@ -1,0 +1,50 @@
+<h1 style="color: blue;">
+    {{titulo}}
+</h1>
+
+<h2>Empleado:</h2>
+<ul>
+    <li>{{empleado.nombre}}</li>
+    <li>{{empleado.cargo}}</li>
+    <li>{{empleado.edad}}</li>
+    <li>{{empleado.contratado}}</li>
+</ul>
+
+<hr/>
+
+<h2>Colores switch</h2>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'red'" [ngStyle]="{'background':color, 'color': 'white', 'padding': '20px'}">Color Rojo</li>
+    <li *ngSwitchCase="'green'" [ngStyle]="{'background':color, 'color': 'black', 'padding': '20px'}">Color Verde</li>
+</ul>
+
+<hr/>
+
+<h2>Selector de colores</h2>
+<input type="text" [(ngModel)]="color_seleccionado" />
+<!--<pre
+    [class.bordeAzul]="color_seleccionado == 'blue'"
+>-->
+<!--<pre
+    [ngClass]="['bordeAzul', 'bordeVerde']"
+>-->
+<pre
+    [ngClass]="{
+        bordeAzul: color_seleccionado == 'blue',
+        bordeVerde: color_seleccionado == 'green'
+    }"
+>
+    Texto con borde de color
+</pre>
+<div
+    [ngStyle]="{
+        'background':color_seleccionado,
+        'width': '200px',
+        'height': '200px',
+        'float': 'right',
+        'margin-right': '69%'
+    }"
+>
+<div style="clear:both"></div>
+
+</div>
