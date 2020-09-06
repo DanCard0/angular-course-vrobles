@@ -12,3 +12,16 @@
 <ng-template #noAdmin>
     <strong>NO Eres el administrador de la webapp</strong>
 </ng-template>
+
+<componente-hijo
+    [propiedad_uno]="'Este es el valor de la propiedad UNO pasado desde el componente padre'"
+    [alias_propiedad_dos]="'Este es el valor de la propiedad DOS pasado desde el componente padre'"
+    [propiedad_tres]="dato_externo"
+    [propiedad_cuatro]="identity_parent"
+    (desde_el_hijo)="recibirDesdeElHijo($event)"
+>
+</componente-hijo>
+
+<div *ngIf="datos_recibidos_hijo">
+    {{datos_recibidos_hijo.nombre}}
+</div>
